@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+    <div id="header">
+        <div style="padding-left: 15px;">
+            <h1>Event Planning Service</h1>
+        </div>
+        <div style="padding-right: 15px;">
+            <ul>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#filters">Filters</a></li>
+                <li><a href="#past_events">Past Events</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="events">
+        <div class="event_head">
+            <h2 style="text-align: center;">What we do</h2>
+        </div>
+        <div class="event_type 1" id="Conferences">
+            <div>
+                <img src="./images/Conferences.jpg">
+                <h2 >Conferences</h2>
+                <p>"Elevate your conference experience with our professional event planning. From seamless logistics to engaging presentations, we ensure a productive and inspiring atmosphere for your attendees. Trust us to bring your vision to life and leave a lasting impression."</p>
+                <p class="prices"></p>
+            </div>
+        </div>
+        <div class="event_type 2" id="Parties">
+            <div>
+                <img src="./images/Parties.jpg">
+                <h2>Parties</h2>
+                <p>"Let us ignite the excitement for your next party! With dynamic themes, vibrant entertainment, and meticulous planning, we craft unforgettable experiences for you and your guests. From intimate gatherings to lively celebrations, we'll make your party one to remember."</p>
+                <p class="prices"></p>
+            </div>
+        </div>
+        <div class="event_type 3" id="Weddings">
+            <div>
+                <img src="./images/Weddings.jpg">
+                <h2>Weddings</h2>
+                <p>"Create unforgettable memories with our exquisite wedding planning service. From elegant venues to personalized decor, we tailor every detail to your dream vision. Let us transform your special day into a timeless celebration of love and joy."</p>
+                <p class="prices"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="event_details">
+        <button class="close">Close</button>
+        <h2 id="eventTitle"></h2>
+        <img id="eventImage" src="">
+        <p id="eventDescription"></p>
+        <p id="eventPrice"></p>
+        <p id="eventServices"></p>
+    </div>
+    
+    <div id="filters">
+        <h2>Filter Events</h2>
+        <div id="check">
+            <form class="check">
+                <input type="checkbox" value="Catering">
+                <label>Catering</label>
+                <input type="checkbox" value="Photography">
+                <label>Photography</label>
+                <input type="checkbox" value="Entertainment">
+                <label>Entertainment</label>
+            </form>
+        </div>
+        <div id="radio">
+            <form class="radio">
+                <input type="radio" name="price" value="50000">
+                <label>50000-75000</label>
+                <input type="radio" name="price" value="75000">
+                <label>75000-100000</label>
+                <input type="radio" name="price" value="100000">
+                <label>>100000</label>
+            </form>
+        </div>
+            <button style="font-family:Oswald,sans-serif;">Filter Search</button>
+        </div>
+    </div>
+    <div class="display_filtered">
+        <h2>Events that can be offered</h2>
+        <div class="dispevents"></div>
+    </div>
+    <div id="past_events">
+        <ul>
+            <li style="margin-left: 200px; font-weight: 700;">Our past events</li>
+            <li class="past"><a href="./2019events.html">2019 events</a></li>
+            <li class="past"><a href="./2020events.html">2020 events</a></li>
+            <li class="past"><a href="./2021events.html">2021 events</a></li>
+            <li class="past"><a href="./2022events.html">2022 events</a></li>
+        </ul>
+    </div>
+    <button class="reqform" style="font-family:Oswald,sans-serif;">Get our services</button>
+    <div id="contact">
+        <form class="hide contact_form" id="info_form" onsubmit="return checkform()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name:" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email:" required>
+            <label for="ph">Phone Number</label>
+            <input type="text" id="ph" name="ph" placeholder="Enter your mobile number:" required>
+            <label for="eventsel" >Select the event</label>
+            <select name="eventChoice">
+                <option class="options" value="Wedding">Weddings</option>
+                <option class="options" value="Conference">Conferences</option>
+                <option class="options" value="Parties">Parties</option>
+            </select>
+            <input type="submit" class="buttons" value="Submit form" style="width: 120px;">
+            <input type="button" class="buttons" value="Request a quotation" style="width: 135px;">
+            <input type="button" class="buttons close" value="Close" style="width: 75px;">
+            <br><br>
+            <h2 class="error"></h2>
+        </form>
+    </div>
+
+</div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

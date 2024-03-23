@@ -1,0 +1,242 @@
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+}
+img{
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin-top: 7px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    border-radius: 10px;
+}
+#header{
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    background-color: lightcoral;
+    border-radius: 10px;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.5s background-color;
+}
+li:hover{
+    background-color: white;
+}
+#header a{
+    padding:  15px;
+    font-size: larger;
+    text-decoration: none;
+    color: black;
+}
+#events{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 0.6fr 3fr;
+    gap: 10px;
+}
+.event_type{
+    cursor: pointer;
+    border: 2px transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s background-color,0.5s box-shadow;
+}
+.event_type:hover{
+    background-color: lightblue;   
+    box-shadow: 0 0 10px black;
+}
+.event_type h2{
+    text-align: center;
+}
+.event_type p{
+    text-align: center;
+}
+.event_head{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: center;
+}
+
+.contact_form{
+    transform: translate(50%,10%);
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 7px transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    padding: 10px;
+    width: 700px;
+    
+}
+.contact_form input{
+    width: 70%;
+    height: 30px;
+    transition: padding 0.5s;
+}
+.contact_form input:focus{
+    padding: 5px;
+}
+.buttons{
+    display: block;
+    margin-top: 7px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+select{
+    width: 60%;
+}
+#contact{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        align-items: center;
+        justify-content: center;
+}
+label{
+    margin-top: 10px;
+}
+.hide{
+    display: none;
+}
+
+.enlarge{
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    margin: auto;
+    height: 800px;
+    width: 700px;
+    display: block;
+}
+
+#filters{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.7s background-color,0.7s padding;
+}
+#filters:hover{
+    background-color: lightcoral;
+    padding: 15px;
+}
+#filters div{
+    margin-top: 25px;
+}
+
+.reqform{
+    margin-top: 10px;
+    padding: 7px;
+    transform: translateX(45vw);
+}
+.reqform:hover{
+    background-color: lightblue;
+}
+
+.big_view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s width,0.5s height;
+}
+.big{
+    
+    position:fixed;
+    width: 75%;
+    height: 80vh;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: lightblue;
+}
+
+#past_events .past{
+    text-decoration: none;
+    padding: 20px;
+    transition: 0.5s padding;
+}
+#past_events a{
+    color: black;
+    text-decoration: none;
+}
+#past_events .past:hover{
+    background-color: lightcoral;
+    padding: 35px;
+}
+
+
+
+.event_details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 75%;
+    background-color: lightblue;
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.event_details button.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: red;
+    font-weight: bold;
+}
+.event_details button.close:hover{
+    background-color: white;
+    cursor: pointer;
+}
+#eventPrice,#eventServices,#eventTitle{
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: attract 3s infinite alternate;
+}
+
+@keyframes attract {
+    0%{color: red; }
+    25%{color: orange; }
+    50%{color: blueviolet; }
+    75%{color: palevioletred; }
+    100%{color: blue; }
+
+}
+.display_filtered{
+    padding: 30px;
+    background-color: lightblue;
+}
